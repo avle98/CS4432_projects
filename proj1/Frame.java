@@ -31,17 +31,18 @@ public class Frame {
     }
 
     //setters
-    public void setContent(String newContent) {
-        this.content = newContent;
+    public Integer setContent(String inContent) {
+        this.content = inContent;
+        return 1;
     }
-    public void setDirty(Boolean newDirty) {
-        this.dirty = newDirty;
+    public void setDirty(Boolean inDirty) {
+        this.dirty = inDirty;
     }
-    public void setPinned(Boolean newPinned) {
-        this.pinned = newPinned;
+    public void setPinned(Boolean inPinned) {
+        this.pinned = inPinned;
     }
-    public void setBlockId(Integer newBlockId) {
-        this.blockId = newBlockId;
+    public void setBlockId(Integer inBlockId) {
+        this.blockId = inBlockId;
     }
 
 
