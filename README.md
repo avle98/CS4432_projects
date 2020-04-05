@@ -1,2 +1,3 @@
-# CS4432
-Database Systems II Assignments
+# CS4432 - Database Systems II Assignments
+
+## Assignment 1: 
