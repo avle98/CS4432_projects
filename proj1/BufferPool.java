@@ -24,30 +24,58 @@ public class BufferPool {
 
 
     //method1: public method to initialize()
-    //build the array given the input argument
-    //go over each frame and initialize this frame
     public BufferPool (Integer poolSize) {
+        //build the array given the input argument
         ArrayList<Frame> bufferArray = new ArrayList<Frame>();
+        //go over each frame and initialize this frame
         for (Integer i=1; i<poolSize+1; i++) {
             Frame eachFrame = new Frame(i);
             bufferArray.add(eachFrame);
         }
-        buffers = bufferArray
+        buffers = bufferArray;
     }
 
-    //method2: search if a certain block (file) is available in the buffer pool
+    //method2: return buffer number (slot number in array) holding this block
     //takes blockId as input
-    //returns buffer number (slot number in the array) holding this block (or -1 if not available)
+    public Integer getBufNum (Integer blockId) {
+        Integer bufNum = -1; //not available
+        //search if a certain block (file) is available in the buffer pool
+        for (Integer i=1; i<this.buffers.size()+1; i++) {
+            if (this.buffers.get(i).getBlockId() == blockId) {
+                bufNum = i; // available
+            }
+        }
+        return bufNum;
+    }
 
+    //method3: return content of a given blockId if block is present
+    //takes blockId as input
+    public Integer getBlockId (Integer blockId) {
+        return this.buffers.get(getBufNum(blockId)).getBlockId();
+    }
 
-    //method3: used if the needed blockId is not in the buffer pool
-    //read the block (file) from disk and bring it to the buffer pool (in an empty frame)
+    //method4: read block (file) from disk and bring it to the buffer pool if blockId is not in buffer pool
+    public void bringToBufferPool () {
+        //read the block (file) from disk
+        //bring it to the buffer pool
+    }
 
+    //method5: search and return a number in the array for an empty frame
+    public Integer getArrayNum () {
+        Integer arrayNum = -1; //full frame
+        for (Integer i=0; i<this.buffers.size(); i++) {
+            Integer thisBlockId = this.buffers.get(i).getBlockId();
+            if (thisBlockId == -1) {
+                arrayNum = i;
+            }
+        }
+        return arrayNum;
+    }
 
-    //method4: search and give you back a number in the array for an empty frame (if any)
+    //method6: if there are no empty frames in the buffer pool, then take one out and return it back to disk
+    public void returnToDisk () {
 
-
-    //method5: if there are no empty frames in the buffer pool, then take one out and return it back to disk (if possible)
+    }
 
 }
 

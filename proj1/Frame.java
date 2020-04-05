@@ -47,7 +47,8 @@ public class Frame {
 
 
     //method1: return a specific record in this block (record number i)
-    //take an input of record number (i) and return the content of this record (string of 40 bytes)
+    //take an input of record number (i)
+    //return the content of this record (string of 40 bytes)
     public String getRecord(int i) {
         Integer beginIndex = i*1024;
         Integer endIndex = beginIndex + 40;
@@ -62,12 +63,15 @@ public class Frame {
         Integer beginIndex = recordNum * 1024;
         Integer endIndex = beginIndex + 40;
         String oldContent = this.content.substring(beginIndex, endIndex);
+        if (oldContent != newContent) {
+            this.dirty = true;
+        }
         this.content.replace(oldContent, newContent);
     }
 
     //method3: initialize() method to initialize an empty frame
     //content = 40byte char of c's, dirty and pinned = false, blockId = -1
-    public Frame() {
+    public Frame(Integer i) {
         char[] contentArray = new char[40];
         Arrays.fill(contentArray, 'c');
         content = new String(contentArray);

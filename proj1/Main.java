@@ -7,7 +7,8 @@ public class Main {
         //1) Calling the program
         //a. Create BufferPool class with "n" slots in the "buffers" array
         //b. Do all proper initializations; all frames are empty
-        //c. print "THE PROGRAM IS READY FOR THE NEXT COMMAND"
+        //c. print message
+        System.out.println("The program is ready for the next command");
 
         //2) GET command: "Get k"
         //User needs to print the content of record #k from the file
