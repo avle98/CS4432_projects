@@ -54,10 +54,25 @@ public class BufferPool {
         return this.buffers.get(getBufNum(blockId)).getBlockId();
     }
 
-    //method4: read block (file) from disk and bring it to the buffer pool if blockId is not in buffer pool
-    public void bringToBufferPool () {
-        //read the block (file) from disk
-        //bring it to the buffer pool
+    //method4: read block (file) from disk and bring it to the buffer pool
+    //takes array list of files and blockId as input
+    public void bringToBufferPool (ArrayList<Frame> files, Integer blockId) {
+        //read the block (file) from disk and if blockId in buffer pool
+        if (getBufNum(blockId) == -1) {
+            //search for blockId in files array (memory) with same blockId
+            for (Integer i=0; i<files.size(); i++) {
+                if (files(i).getBlockId() == blockId) {
+                    //if there's an empty frame, add it to empty frame in buffer pool
+                    if (this.getArrayNum() != -1) {
+                        this.buffers.set(getArrayNum(), files.get(i));
+                    }
+                    //if there is no empty frame, take one out and return it back to disk
+                    else {
+                        this.buffers.set(1, files.get(i))
+                    }
+                }
+            }
+        }
     }
 
     //method5: search and return a number in the array for an empty frame
@@ -70,11 +85,6 @@ public class BufferPool {
             }
         }
         return arrayNum;
-    }
-
-    //method6: if there are no empty frames in the buffer pool, then take one out and return it back to disk
-    public void returnToDisk () {
-
     }
 
 }
