@@ -1,8 +1,7 @@
 package Index;
-
 import java.util.ArrayList;
-import block.BlockLoader;
-import block.Record;
+import Block.BlockLoader;
+import Block.Record;
 
 public class ArrayIndex implements Index<Integer> {
 
@@ -10,7 +9,6 @@ public class ArrayIndex implements Index<Integer> {
 
     public ArrayIndex() {
         this.index = new ArrayList[5000];
-
         load();
     }
 

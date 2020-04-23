@@ -1,9 +1,7 @@
 package Query;
-
 import java.util.ArrayList;
-
-import block.Record;
-import index.Index;
+import Block.Record;
+import Index.Index;
 
 public interface QueryCondition {
 

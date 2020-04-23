@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Block/Block.iml" filepath="$PROJECT_DIR$/Block/Block.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Index/Index.iml" filepath="$PROJECT_DIR$/Index/Index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Query/Query.iml" filepath="$PROJECT_DIR$/Query/Query.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/proj2.iml" filepath="$PROJECT_DIR$/.idea/proj2.iml" />
     </modules>
   </component>

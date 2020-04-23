@@ -1,9 +1,8 @@
-package index;
+package Index;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import block.Record;
-import block.BlockLoader;
+import Block.Record;
+import Block.BlockLoader;
 
 public class HashIndex implements Index {
     private HashMap<Integer, ArrayList<IndexPointer>> index;

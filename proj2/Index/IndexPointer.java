@@ -1,13 +1,9 @@
 package Index;
-
-import block.Record;
-
+import Block.Record;
 
 public class IndexPointer {
-
     private int fileNumber;
     private int recordNumber;
-
 
     public IndexPointer(int fileNumber, int recordNumber) {
         this.fileNumber = fileNumber;
@@ -17,6 +13,7 @@ public class IndexPointer {
     public int getFileNumber() {
         return fileNumber;
     }
+
     public int getRecordNumber() {
         return recordNumber;
     }
