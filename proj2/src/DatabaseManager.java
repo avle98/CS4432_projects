@@ -1,23 +1,25 @@
-package Main;
+package main;
+import block.BlockLoader;
+import block.Record;
+import index.ArrayIndex;
+import index.DefaultIndex;
+import index.HashIndex;
+import index.Index;
+import query.Query;
+import query.QueryCondition;
+import query.QueryManager;
 import java.util.ArrayList;
 import java.util.Date;
-import Block.BlockLoader;
-import Block.Record;
-import Index.ArrayIndex;
-import Index.DefaultIndex;
-import Index.HashIndex;
-import Index.Index;
-import Query.Query;
-import Query.QueryCondition;
-import Query.QueryManager;
 
 public class DatabaseManager {
-
     private DefaultIndex defaultIndex;
     private HashIndex hashIndex;
     private ArrayIndex arrayIndex;
     private boolean indexGenerated;
 
+    /**
+     * constructor
+     */
     public DatabaseManager() {
         defaultIndex = new DefaultIndex();
         indexGenerated = false;

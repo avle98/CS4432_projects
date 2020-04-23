@@ -1,5 +1,5 @@
-package Index;
-import Block.Record;
+package index;
+import block.Record;
 import java.util.ArrayList;
 
 public interface Index {

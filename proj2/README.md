@@ -5,14 +5,13 @@ Name: Ann-Elizabeth Le
 ID: 239959474
 
 **Section 1: How to Compile**
-   1. Use cmd/terminal to navigate to the location of the source files
-   2. Use the command 'java -jar CS4432_proj2_avle.jar #' where # is the number of frames to run
+   1. Use the terminal to go into the /src folder
+   2. Types in the command 'java Main.java #' where # is the number of frames 
  
 **Section 2: Test Results**
  <br/>
-My program passed all of the test cases supplied with accuracy. 
-All commands work. 
+My program passed all of the test cases and all of the commands work. 
 
 **Section 3: Design Decisions** 
 <br/>
-My design decisions adhered to the outline given by the project description.
+My design decisions were based on the project outline.

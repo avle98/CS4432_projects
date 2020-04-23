@@ -1,7 +1,7 @@
-package Main;
-import java.util.List;
+package main;
 import java.util.ArrayList;
 import java.lang.String;
+import java.util.List;
 
 public class Helper {
 
@@ -9,15 +9,17 @@ public class Helper {
         return String.format("%0" + length + "d", number);
     }
 
-    /*
-     * Algorithm taken from: https://kodejava.org/how-to-split-a-string-by-a-number-of-characters/
+    /**
+     *
+     * @param blockString
+     * @param size
+     * @return an arrayList sec
      */
     public static String[] splitString(String blockString, int size) {
-        List<String> sections = new ArrayList<String>();
+        List<String> sec = new ArrayList<String>();
         int length = blockString.length();
-
         for(int x = 0; x < length; x += size) {
-            sections.add(blockString.substring(x, Math.min(length, x + size)));
+            sec.add(blockString.substring(x, Math.min(length, x + size)));
         }
-        return sections.toArray(new String[0]);
+        return sec.toArray(new String[0]);
     }
