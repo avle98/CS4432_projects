@@ -1,6 +1,7 @@
 # CS4432 - Database Systems II Assignments
 
-Assignment 1: Creating a Buffer Management System
+Project 1: Creating a Buffer Management System
 <br/>
-Assignment 2: Implementing a Simplified Versin of Indexing in DBMS's
+Project 2: Implementing a Simplified Version of Indexing in DBMS's
 <br/>
+Project 3: Implementing a Simplified Version of Join and Aggregation in DBMS's
