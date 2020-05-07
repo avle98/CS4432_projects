@@ -6,7 +6,7 @@ ID: 239959474
 
 **Section 1: How to Compile**
    1. Use the terminal to go into the /src folder
-   2. Types in the command 'java Main.java #' where # is the number of frames 
+   2. Type in the command 'java Main.java #' where # is the number of frames 
  
 **Section 2: Test Results**
  <br/>
