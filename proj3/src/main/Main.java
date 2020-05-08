@@ -1,22 +1,19 @@
 package main;
-
-import java.util.Scanner;
-
 import data.Record;
-import dataset.DataFileReader;
 import dataset.Dataset;
+import dataset.DataFileReader;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
-		
+
 		Scanner scanner = new Scanner(System.in);
 	
 		while(true) {
 			System.out.println("Enter query:");
 			String input = scanner.nextLine();
-			
+			// SQL queries
 			switch(input) {
 			case "SELECT A.Col1, A.Col2, B.Col1, B.Col2 FROM A, B WHERE A.RandomV = B.RandomV":
 				Query.performHashJoin();
@@ -37,9 +34,7 @@ public class Main {
 				Query.performHashBasedAggregationFunction(Dataset.B,AggregationFunctionType.AVG_RANDOMV);
 				break;	
 			}
-			
 		}
-		
 	}
 
 }

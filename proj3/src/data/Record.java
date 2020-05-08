@@ -1,18 +1,14 @@
-  
 package data;
-
 import dataset.Dataset;
-import helper.Helper;
+import main.Helper;
 
 public class Record {
 
 	private Dataset dataset;
 	private int fileNumber, recordNumber, randomV;
 	private String name, address;
-	
 	public static final int RECORD_STRING_LENGTH = 40;
-	
-	
+
 	public Record(Dataset dataset, int fileNumber, int recordNumber, String name, String address, int randomV) {
 		this.dataset = dataset;
 		this.fileNumber = fileNumber;
